@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hwb(80 6% 11% / 0.836);
+  
+}
+
+.wrapper {
+  width: 100%;
+
+}
+
+.navbar {
+display: flex;
+flex-direction: column; 
+align-items: center;
+justify-items: end;
+background-color: hsl(221, 94%, 48%);
+padding: 2px;
+gap: -10px;
+
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  padding: 9px 10px;
+}
+
+.navbar ul li a:hover {
+  background-color: rgb(240, 217, 6);
+  transition: 0.3s;
+}
+
+.navbar ul li a:active {
+  color: hwb(56 13% 15%);
+  background-color: #333;
+}
+
+
+.banner {
+  position: relative;
+  text-align: center;
+}
+
+.banner-img {
+  width: 85%;
+  height: 30vh;
+}
+
+.banner-text,
+.banner-to {
+  position: absolute;
+  right: 8%;
+  color: hwb(55 9% 37%);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.banner-text {
+  top: 55%;
+  font-size: 5vw;
+}
+
+.banner-to {
+  top: 68%;
+  font-size: 7vw;
+}
+
+.welcome-section {
+  padding: 10px;
+  color: #333;
+  font-size: 12px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.welcome-section h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.welcome-section p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.box {
+  width: 100%;
+  max-width: 470px;
+  height: 160px;
+  background-color: hwb(55 9% 37%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.footer {
+  color: black;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  background-color: hwb(55 9% 37%);
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    align-items: end;
+    justify-content: space-between;
+    padding: 10px 90px;
+  }
+
+  .logo {
+      margin-bottom: 0px;
+      height: 80px;
+      margin-right: 67vw;
+  }
+
+  .welcome-section {
+    max-width: 840px;
+  }
+
+  .banner {
+    position: relative;
+    text-align: center;
+  }
+
+  .banner-text,
+.banner-to { 
+  right: 13%;
+}
+  
+  .banner-img {
+    width: 72%;
+    height: 30vh;
+  }
+
+  .banner-text {
+    font-size: 38px;
+    margin-top: -5px;
+  }
+
+
+  .banner-to {
+    font-size: 45px;
+  }
+
+
+  .boxes {
+    flex-direction: row;
+  }
+
+  .box {
+    width: 24%;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+  }
+}
+
+.contact-form {
+  max-width: 810px;
+  margin: 5px auto;
+  padding: 15px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.contact-form{
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  width: 250px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 10px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-group {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.submit-group button {
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-group button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-group label {
+    width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  .contact-form {
+    max-width: 500px;
+  }
+
+  .submit-group {
+    justify-content: center;
+  }
+}
